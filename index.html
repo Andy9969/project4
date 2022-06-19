@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width device-width,
+        initial-scale=1">
+        <meta name="description" content="">
+        <title>EntertainmentMix</title>
+        <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            .navbar-nav li:hover>ul.dropdown-menu {
+                display: block;
+                nav-right: 100%;
+              }
+
+              #nav-item-login {
+                cursor: pointer;
+              }
+
+              body {
+                background-image:url('image/entertainmentmix_background.jpg');
+                background-repeat: no-repeat; background-size: cover; background-position:inherit; background-attachment: scroll;
+              }
+
+              .navbar {
+                color: transparent;
+              }
+
+              .navbar-brand {
+                padding-left: 200px;
+              }
+
+              #login-form {
+                display: none;
+              }
+
+              .form-box {
+                width: 380px; height: 480px; position: relative; margin: 2% auto;
+                background: rgba(0, 0, 0, 0.3);  overflow: hidden;
+              }
+
+              .button-box {
+                width: 200px; height: 35px;  margin: 35px auto; position: relative;
+                box-shadow: 0 0 20px 9px #ff61241f; border-radius: 30px;
+              }
+
+              .toggle-btn {
+                 cursor: pointer;
+                background: transparent; border: 0; outline: none; position: relative;
+              }
+
+              
+
+              #btn {
+                top:0; left: 0; position: absolute; width: 100px; height: 100%;
+                background: #f3c693; border-radius: 30px; transition: 1s;
+              }
+
+              .input-group-login {
+                top: 150px; position: absolute; width: 280px; transition: 1s;
+              } 
+
+              .input-group-signup {
+                top: 120px; position: absolute; width: 280px; transition: 1s;
+              }
+
+              .input-field {
+                width: 100%; padding: 10px 0; margin: 5px 0; border-left: 0;
+                border-top: 0; border-right: 0; border-bottom: 1px solid #999; outline: none;
+                background: transparent;
+              }
+
+              .submit-btn {
+                width: 85%; padding: 10px 30px; cursor: pointer; display: block; margin: auto;
+                background: #f3c693; border: 0; outline: none; border-radius: 30px;
+              }
+
+              .check-box {
+                margin: 30px 10px 34px 0;
+              }
+
+              span {
+                color: #777;
+                font-size: 12px;
+                bottom: 68px;
+                position: absolute;
+              }
+
+              #login {
+                left: 50px;
+              }
+
+              #login input {
+                color:white;
+                font-size: 15;
+              }
+
+              #signup {
+                left: 450px;
+              }
+
+              #signup input {
+                color: white;
+                font-size: 15;
+              }
+
+             
+        </style>
+        
+    </head>
+    <body>
+         <!--Navbar starts here-->
+         <nav class="navbar navbar-expand-lg  text-center justify-content-center">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand mx-4 justify-content-center" href="#">
+                    <img src="image/entertainmentmix-logo.png" alt="img" width="100" height="60">
+                </a>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mx-4">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white " aria-current="page" href="#" id="content" 
+                    onclick="document.getElementById('slide-page').style.display='block'">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white ms-5" href="#" id="navbarDropdown" role="button" id="content" data-bs-toggle="dropdown" aria-expanded="false">
+                      Post
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">News</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Entertainment</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Life</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Finace</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white ms-5" href="#" id="navbarDropdown" id="content" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Content
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="dropdown-submenu dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="true">Music</a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hip/Hop</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Pop</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Rnb</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Afrobeats</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Reggae</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Jazz</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Country/Old folk</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Rock</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Funk</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">K-pop</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Gospel</a></li>
+                          </ul>
+                        </li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li class="dropdown-submenu dropend">
+                         <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="true">Video</a>
+                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Music Videos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="true">Movies</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Animation</a>
+                                    </li><li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Horror</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Comedy</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Adventure</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Sad</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">War</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Musical</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Romance</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Thriller</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Mystery</a></li>
+                                </ul>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Series</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Comedy Videos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sports Videos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Korean Dramas</a></li>
+                         </ul>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-white ms-5 " aria-current="page" href="#" id="content">Contact Us</a>
+                  </li>
+                  <li class="nav-item" id="nav-item-login"><a class="nav-link text-white ms-5" 
+                  onclick="document.getElementById('login-form').style.display='block'
+                   ">Login/Signup</a>
+                  
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success bg-success text-white" type="submit">Search</button>
+                </form>
+               
+              </div>
+            </div>
+          </nav>
+          <!-- Navbar Ends here-->
+
+          <!---- Home Page Starts Here ---->
+
+         
+
+          <!-- Account Page Starts Here -->
+          <div id="login-form" class="login-page">
+            <div class="form-box">
+              <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" onclick="login()" class="toggle-btn text-white me-1 p-2" id="toggle-btn1">LOG IN</button>
+                <button type="button" onclick="signup()" class="toggle-btn text-white ms-5 p-2" id="toggle-btn2">SIGN UP</button>
+              </div>
+              <!--- Creating the Login Form--->
+              <form id="login" class="input-group-login">
+                <i class="fa fa-envelope-o"></i>
+                <input type="text" class="input-field" placeholder="Email Id" required>
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn text-white">LOG IN</button>
+              </form>
+              <!--- Creating the Signup Form--->
+              <form id="signup" class="input-group-signup">
+                <input type="text" class="input-field" placeholder="First Name" required>
+                <input type="text" class="input-field" placeholder="Last Name" required>
+                <input type="email" class="input-field" placeholder="Email " required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                <button type="submit" class="submit-btn text-white">SIGN UP</button>
+              </form>
+            </div>
+          </div>
+            
+          <!--- This section helps move between login and sigup form --->
+          <script>
+            var x=document.getElementById('login');
+            var y=document.getElementById('signup');
+            var z=document.getElementById('btn');
+            function signup() {
+              x.style.left='-400px';
+              y.style.left='50px';
+              z.style.left='110px';
+            }
+            function login() {
+              x.style.left='50px';
+              y.style.left='450px';
+              z.style.left='0px';
+            }
+          </script>
+          <script>
+            var modal= document.getElementById('login-form');
+            windows.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+
+          <!--- Account page ends here--->
+
+           <!-- JavaSript Bundle with popper-->
+           <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
